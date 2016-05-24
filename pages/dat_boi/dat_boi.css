@@ -1,4 +1,8 @@
 
+body {
+	background-image: url("http://i.imgur.com/Oh0UOrx.jpg");
+}
+
 #game_name {
 	position: absolute;
 	left:50%;
@@ -12,7 +16,6 @@
 
 
 #div_game {
-	background-image: url("http://i.imgur.com/Oh0UOrx.jpg");
 	background-size: cover;
 
 }
