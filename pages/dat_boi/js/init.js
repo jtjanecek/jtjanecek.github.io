@@ -28,14 +28,19 @@ var playerHeight = 110;
 
 // Values for the Memes
 var memeArray = new Array();
-var meme_gravity = 5;
-var meme_deaths = 0;
 
 // Each meme
 var pepe_img = new Image();
 pepe_img.src = "http://i.imgur.com/20Udgkq.png";
 var pepe_width = 35;
 var pepe_height = 35;
+
+var doge_img = new Image();
+doge_img.src = "http://i.imgur.com/wt8yUHi.gif";
+var doge_width = 45;
+var doge_height = 45;
+
+
 
 
 
@@ -51,11 +56,6 @@ function Meme(x,y,width,height, type) {
 };
 
 function update_memes() {
-	console.log(Math.floor(Math.random() * 2));	
-	if (meme_deaths % 8 === 0 && meme_deaths != 0){
-		meme_gravity += 1;
-		meme_deaths = 0;
-	}
 	// For each meme in the memeArray
 	for (var i = 0; i < memeArray.length; ++i) {
 		if (memeArray[i].deaths % 6 === 0 && memeArray[i].deaths != 0) {
@@ -76,7 +76,11 @@ function draw_memes() {
 	for (var i = 0; i < memeArray.length; ++i) {
 		if (memeArray[i].type === "pepe") 
 			context.drawImage(pepe_img, memeArray[i].x,memeArray[i].y,memeArray[i].width,memeArray[i].height);
+		if (memeArray[i].type === "doge")
+			context.drawImage(doge_img, memeArray[i].x,memeArray[i].y,memeArray[i].width,memeArray[i].height);
+	
 	}
+
 };
 
 
@@ -175,6 +179,10 @@ function init()
 
 		memeArray.push(new Meme(250,0,pepe_width, pepe_height, "pepe"));
 		memeArray.push(new Meme(100,0,pepe_width, pepe_height, "pepe"));
+
+		memeArray.push(new Meme(300,0,doge_width, doge_height, "doge"));
+		memeArray.push(new Meme(400,0,doge_width, doge_height, "doge"));
+
 
 		// Run game loop every 'fps' millisecond
 		gameIntervalVariable = setInterval( game_loop , fps);
