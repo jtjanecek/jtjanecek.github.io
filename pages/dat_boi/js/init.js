@@ -5,6 +5,8 @@ var canvas_width ;
 var context;
 var fps = 25;
 var gameIntervalVariable;
+var points = 0;
+var points_html;
 
 // Background and end image
 var background_img = new Image();
@@ -32,8 +34,8 @@ var meme_deaths = 0;
 // Each meme
 var pepe_img = new Image();
 pepe_img.src = "http://i.imgur.com/20Udgkq.png";
-var pepe_width = 70;
-var pepe_height = 70;
+var pepe_width = 35;
+var pepe_height = 35;
 
 
 
@@ -60,6 +62,7 @@ function update_memes() {
 			memeArray[i].y = 0;
 			memeArray[i].x = Math.floor(Math.random() * canvas_width);
 			meme_deaths++;
+			points++;
 		}
 	}
 };
@@ -142,13 +145,16 @@ function game_loop() {
 	// Draw objects 
 	draw_player();
 	draw_memes();
+
+	// Update points
+	points_html.innerHTML = points;
 };
+
 
 function endGame(){
 	clearInterval(gameIntervalVariable);	
 	context.drawImage(game_over_img,0,0,canvas_width,canvas_height);
 };
-
 
 function init()
 	{
@@ -156,6 +162,9 @@ function init()
 		canvas_width = canvas.width;
 		canvas_height = canvas.height;
 		context = canvas.getContext("2d");
+
+		points = 0;
+		points_html = document.getElementById("points_game");
 		
 		init_keyboard_input();
 
