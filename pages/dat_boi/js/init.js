@@ -7,6 +7,7 @@ var fps = 25;
 var gameIntervalVariable;
 var points = 0;
 var points_html;
+var game_running;
 
 // Background and end image
 var background_img = new Image();
@@ -163,10 +164,14 @@ function game_loop() {
 function endGame(){
 	clearInterval(gameIntervalVariable);	
 	context.drawImage(game_over_img,0,0,canvas_width,canvas_height);
+	game_running = false;
 };
 
 function init()
 	{
+		if (!game_running) {
+		game_running = true;
+
 		canvas = document.getElementById("canvas_game");
 		canvas_width = canvas.width;
 		canvas_height = canvas.height;
@@ -174,9 +179,11 @@ function init()
 
 		points = 0;
 		points_html = document.getElementById("game_points");
+
 		
 		init_keyboard_input();
 
+		memeArray = [];
 		memeArray.push(new Meme(250,0,pepe_width, pepe_height, "pepe"));
 		memeArray.push(new Meme(100,0,pepe_width, pepe_height, "pepe"));
 
@@ -186,6 +193,22 @@ function init()
 
 		// Run game loop every 'fps' millisecond
 		gameIntervalVariable = setInterval( game_loop , fps);
+		}
 	};
 
-$(document).ready(init);
+
+function main() {
+
+var button = document.getElementById("game_play_button");
+if (button)
+	button.addEventListener("click", init);
+	init();
+
+
+
+
+};
+$(document).ready(main);
+
+
+
