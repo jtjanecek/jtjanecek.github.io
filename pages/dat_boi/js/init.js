@@ -164,7 +164,7 @@ function init()
 		context = canvas.getContext("2d");
 
 		points = 0;
-		points_html = document.getElementById("points_game");
+		points_html = document.getElementById("game_points");
 		
 		init_keyboard_input();
 
