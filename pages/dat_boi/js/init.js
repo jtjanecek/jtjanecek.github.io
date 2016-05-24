@@ -46,22 +46,27 @@ function Meme(x,y,width,height, type) {
 	this.y = y;
 	this.width = width;
 	this.height = height;
+	this.gravity = 5;
+	this.deaths = 0;
 };
 
 function update_memes() {
-	console.log("Meme deaths:  " + meme_deaths);
-	console.log("Meme gravity: " + meme_gravity);
+	console.log(Math.floor(Math.random() * 2));	
 	if (meme_deaths % 8 === 0 && meme_deaths != 0){
 		meme_gravity += 1;
 		meme_deaths = 0;
 	}
 	// For each meme in the memeArray
 	for (var i = 0; i < memeArray.length; ++i) {
-		memeArray[i].y += meme_gravity;
+		if (memeArray[i].deaths % 6 === && memeArray[i].deaths != 0) {
+			memeArray[i].deaths = 0;
+			memeArray[i].gravity += Math.floor(Math.random() * 2);		
+		}
+		memeArray[i].y += memeArray[i].gravity;
 		if (memeArray[i].y >= canvas_height) {
 			memeArray[i].y = 0;
 			memeArray[i].x = Math.floor(Math.random() * canvas_width);
-			meme_deaths++;
+			memeArray[i].deaths++;
 			points++;
 		}
 	}
