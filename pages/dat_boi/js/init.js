@@ -58,7 +58,7 @@ function update_memes() {
 	}
 	// For each meme in the memeArray
 	for (var i = 0; i < memeArray.length; ++i) {
-		if (memeArray[i].deaths % 6 === && memeArray[i].deaths != 0) {
+		if (memeArray[i].deaths % 6 === 0 && memeArray[i].deaths != 0) {
 			memeArray[i].deaths = 0;
 			memeArray[i].gravity += Math.floor(Math.random() * 2);		
 		}
