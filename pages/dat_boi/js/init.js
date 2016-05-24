@@ -147,7 +147,7 @@ function game_loop() {
 	draw_memes();
 
 	// Update points
-	points_html.innerHTML = points;
+	points_html.innerHTML = "Points: " + points;
 };
 
 
