@@ -1,11 +1,13 @@
 
 body {
 
-	background-color: black;
+	background-color: #808080;
 	color: white;
-
+	vertical-align: middle;
+	margin-left: 40%;
 }
 
-#index_dat_boi_link {
+a {
+	color: white;
 	text-decoration: none;
 }
