@@ -15,6 +15,12 @@ var user_answer = "g";
 var nerd_points = 0;
 
 
+function show_nerd_purity() {
+	document.body.innerHTML = nerd_points;
+
+};
+
+
 function init_question_list() {
 	for (var i = 0; i < 10; ++i) {
 		var index = Math.floor(Math.random() * QUESTION_ARRAY.length);	
@@ -57,8 +63,9 @@ function main_loop() {
 	++current_question_number;
 	user_answer = "g";
 	if (current_question_number > 10) {
-
-
+		document.body.innerHTML = "";	
+		show_nerd_purity();
+		return;
 	}
 	update_question();
 
