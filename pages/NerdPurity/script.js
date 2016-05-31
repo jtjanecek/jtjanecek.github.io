@@ -16,7 +16,58 @@ var nerd_points = 0;
 
 
 function show_nerd_purity() {
-	document.body.innerHTML = nerd_points;
+
+	nerd_points = 0;  // For testing
+
+	var para = document.createElement("p");
+	var text = document.createTextNode("Your Nerd Purity: " + (nerd_points * 10) + "%");
+	para.appendChild(text);
+	document.body.appendChild(para);
+
+
+	//para.style.fontSize = "xx-large";
+	para.setAttribute("style","font-size: 600%; text-align: center");
+
+	var image_url = ""
+	switch (nerd_points) {
+		case 0:
+			image_url = "http://i.imgur.com/a5oziv3.jpg"; 
+			break;
+		case 1:
+			image_url = "";
+			break;
+		case 2:
+
+			break;
+		case 3:
+
+			break;
+		case 4:
+
+			break;
+		case 5:
+
+			break;
+		case 6:
+
+			break;
+		case 7:
+
+			break;
+		case 8:
+
+			break;
+		case 9:
+			image_url = "http://i.imgur.com/ywH9vuJ.jpg";
+			break;
+		case 10:
+
+			break;
+	}
+	document.body.setAttribute("style", "background-image: url(" + image_url + ")");
+
+
+
 
 };
 
