@@ -17,7 +17,7 @@ var nerd_points = 0;
 
 function show_nerd_purity() {
 
-	nerd_points = 0;  // For testing
+	//nerd_points = 0// For testing
 
 	var para = document.createElement("p");
 	var text = document.createTextNode("Your Nerd Purity: " + (nerd_points * 10) + "%");
@@ -34,34 +34,34 @@ function show_nerd_purity() {
 			image_url = "http://i.imgur.com/a5oziv3.jpg"; 
 			break;
 		case 1:
-			image_url = "";
+			image_url = "http://i.imgur.com/zPPvwyV.png";
 			break;
 		case 2:
-
+			image_url = "http://i.imgur.com/M6G4r9z.png";	
 			break;
 		case 3:
-
+			image_url = "http://i.imgur.com/KwXNQC3.png";
 			break;
 		case 4:
-
+			image_url = "http://i.imgur.com/WKRZOIv.png";
 			break;
 		case 5:
-
+			image_url = "http://i.imgur.com/PAc96aL.png";
 			break;
 		case 6:
-
+			image_url = "http://i.imgur.com/QyYDnE4.png";
 			break;
 		case 7:
-
+			image_url = "http://i.imgur.com/USfRzBj.png";
 			break;
 		case 8:
-
+			image_url = "http://i.imgur.com/MaZATsM.png";
 			break;
 		case 9:
 			image_url = "http://i.imgur.com/ywH9vuJ.jpg";
 			break;
 		case 10:
-
+			image_url = "http://i.imgur.com/y51HmNJ.png";
 			break;
 	}
 	document.body.setAttribute("style", "background-image: url(" + image_url + ")");
