@@ -20,7 +20,7 @@ body {
 
 #projects_container {
 	position: absolute;
-	height: 90%;
+	height: 80%;
 	bottom: 0;
 	width:100%;
 }
@@ -44,17 +44,3 @@ td:hover {
 	background-color: #3232ff;
 
 }
-
-/*
-#projects_td {
-	opacity: .5;
-transition: opacity .5s ease-out;
--moz-transition: opacity .5s ease-out;
--webkit-transition: opacity .5s ease-out;
--o-transition: opacity .5s ease-out;
-}
-
-#projects_td:hover {
-	opacity: 1;
-}
-*/
