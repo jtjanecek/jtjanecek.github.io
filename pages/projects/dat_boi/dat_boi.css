@@ -1,0 +1,35 @@
+
+body {
+	background-image: url("http://i.imgur.com/Oh0UOrx.jpg");
+}
+
+#game_name {
+	position: absolute;
+	left:50%;
+	margin-left: 450px;
+}
+
+#game_points {
+	position: absolute;
+	text-size: 50px;
+}
+
+
+#div_game {
+	background-size: cover;
+
+}
+
+#canvas_game {
+	position: relative;
+	border: 5px solid black;
+	left: 50%;
+	margin-left: -250px;
+}
+
+
+button {
+	position: relative;
+	left: 47%;
+	margin-top: 80px;
+}
