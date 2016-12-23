@@ -3,7 +3,6 @@ var fadeInTime = 1500;
 var fadeOutTime = 500;
 
 function main() {
-    $("body").css("display", "none");
     $("body").fadeIn(fadeInTime);
 
     $("#projects_td").click(function(eventHandler){
