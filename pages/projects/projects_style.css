@@ -35,12 +35,17 @@ table{
 
 td {
 	text-align: center;
-	width: 33%;
+	width: 25%;
 	border: 3px solid white;
 	transition: background-color 0.5s linear;
 }
 
 td:hover {
 	background-color: #0086b8;
+
+}
+
+img {
+	width: 60%;
 
 }

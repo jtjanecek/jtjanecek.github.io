@@ -22,6 +22,26 @@ function main() {
           });
     });
 
+    $("#twitch_bot_td").click(function(eventHandler){
+        eventHandler.preventDefault();
+        $('body').fadeOut(fadeOutTime, function(){
+            window.location = "https://github.com/jtjanecek/TwitchBot";
+          });
+    });
+
+    $("#bling_td").click(function(eventHandler){
+        eventHandler.preventDefault();
+        $('body').fadeOut(fadeOutTime, function(){
+            window.location = "https://github.com/jtjanecek/Bling";
+          });
+    });
+
+    $("#odds_td").click(function(eventHandler){
+        eventHandler.preventDefault();
+        $('body').fadeOut(fadeOutTime, function(){
+            window.location = "https://play.google.com/store/apps/details?id=com.fourbolt.odds";
+          });
+    });
 
 };
 
