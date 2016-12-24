@@ -1,15 +1,4 @@
 
-body {
-	background-color: #00A8E6;
-		color: white;
-	overflow-x: hidden;
-	margin: 0;
-	padding: 0;
-	border: 0;
-	display: none;
-
-}
-
 #name {
   position: absolute;;
 	top: 30%;
