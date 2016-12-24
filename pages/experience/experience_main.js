@@ -13,14 +13,6 @@ function main() {
         });
     });
 
-    $("#experience_td").click(function(eventHandler){
-      redirect = "./pages/experience/experience.html";
-      eventHandler.preventDefault();
-      $('body').fadeOut(fadeOutTime, function(){
-          document.location.href = redirect;
-        });
-    });
-
 };
 
 
