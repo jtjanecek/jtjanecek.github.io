@@ -15,7 +15,6 @@ body {
 	font-family: sans-serif;
 }
 
-
 #experience_container {
 	position: absolute;
 	height: 80%;
@@ -23,15 +22,26 @@ body {
 	width:100%;
 }
 
-table{
+table {
 	height: 100%;
 	width:100%;
 }
 
-td {
-	cursor: pointer;
-	text-align: center;
-	width: 25%;
+.main_table {
 	border: 3px solid white;
-	transition: background-color 0.5s linear;
+}
+
+.image_and_title_div {
+	text-align:center;
+	float: left;
+	margin-left: 20%;
+}
+
+.description {
+	position: absolute;
+	margin-left: 40%;
+}
+
+img {
+	width: 50%;
 }
