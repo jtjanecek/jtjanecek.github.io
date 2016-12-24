@@ -21,6 +21,14 @@ function main() {
         });
     });
 
+    $("#more_td").click(function(eventHandler){
+      redirect = "./pages/more/more.html";
+      eventHandler.preventDefault();
+      $('body').fadeOut(fadeOutTime, function(){
+          document.location.href = redirect;
+        });
+    });
+
 };
 
 
