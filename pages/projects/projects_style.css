@@ -34,6 +34,7 @@ table{
 }
 
 td {
+	cursor: pointer;
 	text-align: center;
 	width: 25%;
 	border: 3px solid white;
