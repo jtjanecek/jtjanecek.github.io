@@ -60,17 +60,3 @@ td:hover {
 	background-color: #0086b8;
 	cursor: pointer;
 }
-
-/*
-#projects_td {
-	opacity: .5;
-transition: opacity .5s ease-out;
--moz-transition: opacity .5s ease-out;
--webkit-transition: opacity .5s ease-out;
--o-transition: opacity .5s ease-out;
-}
-
-#projects_td:hover {
-	opacity: 1;
-}
-*/
