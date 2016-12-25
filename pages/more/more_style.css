@@ -1,1 +1,10 @@
 
+h1 {
+  text-align: center;
+}
+
+
+#list {
+    position: absolute;
+    margin-left: 40%;
+}
