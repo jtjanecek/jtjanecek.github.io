@@ -51,6 +51,7 @@ table{
 
 td {
 	text-align: center;
+  font-size: 175%;
 	width: 33%;
 	border: 3px solid white;
 	transition: background-color 0.5s linear;
